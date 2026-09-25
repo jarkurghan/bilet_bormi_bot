@@ -148,7 +148,7 @@ async function main() {
         }
     }
 
-    await sendLog(`🎫 Scheduler: ${unique.size} yo'nalish, ${okKeys.size} muvaffaqiyatli API, ${sent} xabar. ${parts.date} ${String(parts.hour).padStart(2, "0")}:${String(parts.minute).padStart(2, "0")}`);
+    // await sendLog(`🎫 Scheduler: ${unique.size} yo'nalish, ${okKeys.size} muvaffaqiyatli API, ${sent} xabar. ${parts.date} ${String(parts.hour).padStart(2, "0")}:${String(parts.minute).padStart(2, "0")}`);
 }
 
 main()
