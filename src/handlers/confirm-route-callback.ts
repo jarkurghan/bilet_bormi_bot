@@ -52,8 +52,9 @@ export async function registerConfirmRouteCallback(ctx: CTX) {
             username: flow.user.username,
         });
         const msg =
-            `🆕 Yangi yo'nalish:\n\n👤 Ism: ${user}\n🆔 ID: <code>${flow.user.tg_id}</code>\n🤖 Bot: @${bot.botInfo.username}\n\n` +
-            `${result.route?.transport === "train" ? "🚂" : "🚌"} Yo'nalish: ${result.route?.from_name_latin} → ${result.route?.to_name_latin}\n` +
+            `${result.route?.transport === "train" ? "🚄" : "🚌"} Yangi yo'nalish:\n\n` +
+            `👤 Ism: ${user}\n🆔 ID: <code>${flow.user.tg_id}</code>\n🤖 Bot: @${bot.botInfo.username}\n\n` +
+            `🧭 Yo'nalish: ${result.route?.from_name_latin} → ${result.route?.to_name_latin}\n` +
             `📅 Sana: ${result.route?.travel_date}`;
         await bot.api.sendMessage(ADMIN_CHAT, msg, { parse_mode: "HTML" });
 
